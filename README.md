@@ -90,3 +90,23 @@ Now that terminal has been set up to recognise the user/account to be associated
   The -u origin master option sets origin (GitHub) as the default remote for future git push commands on the master branch.
 - **Verify the Commit on GitHub**
   - Go to your GitHub repository in the browser. You should see the testfile.txt file and your first commit with the message "Initial commit: add testfile.txt".
+
+# Git Going
+
+To update your local repository with new changes from the remote repository, and then commit your own changes back to GitHub, use commands indicated below.
+
+```bash
+# Navigate to your local repo
+cd my-git-project
+
+# Pull the latest changes
+git pull origin master
+
+# Make your changes (edit files, create new ones etc.)
+
+git status						# Check status of your repository
+git add testfile.txt					# Stage changes (or use git add . to stage all)
+git commit -m "Add some new changes to testfile.txt"	# Commit changes
+git push origin master					# Push changes back to GitHub
+```
+
