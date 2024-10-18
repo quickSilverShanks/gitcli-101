@@ -118,7 +118,8 @@ git checkout -b new-branch-name			# create a new branch from the master branch
 
 # after working on the new branch files
 git add <file-name>				# Stage the changed files, or use '.' to stage all changes
-git commit -m "Describe the changes you made"
+git commit -m "describe the changes you made"
+git push origin new-branch-name			# Push the new branch and commits to the remote
 
 git checkout master				# switch back to the master branch
 git diff master..new-branch-name		# shows the differences between master branch and the new branch
