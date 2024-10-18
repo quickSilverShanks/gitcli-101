@@ -111,4 +111,21 @@ git push origin master					# Push changes back to GitHub
 ```
 # Git Branch
 
-[Yet to Update...]
+Following commands can be used to create, work with git branches and then commit the changes back to master/main branch.
+
+```bash
+git checkout -b new-branch-name			# create a new branch from the master branch
+
+# after working on the new branch files
+git add <file-name>				# Stage the changed files, or use '.' to stage all changes
+git commit -m "Describe the changes you made"
+
+git checkout master				# switch back to the master branch
+git diff master..new-branch-name		# shows the differences between master branch and the new branch
+git diff --stat master..new-branch-name		# summary of the differences (commits and file changes)
+
+git merge new-branch-name			# merge the changes from new branch back into the master branch
+
+git branch -d new-branch-name			# optional: delete the new branch after merging, if no longer needed
+```
+
